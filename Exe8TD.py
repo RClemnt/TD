@@ -4,9 +4,9 @@ import random
 
 
 
-candidat  = [ "Alexandre", "Clement ", "Leo",  ]
+candidat  = [ "Alexandre", "Clement", "Leo",  ]
 
-note      = [ "pas bien", " assez bien", " bien ", "tres bien ", "excellent"]
+note      = [  " bien ", "tres bien ", "excellent"]
 
 student = int(input(  "Enter number of student" ) )
 
@@ -39,40 +39,41 @@ for i in  range (0, student) :
         print ( "bon" )
 
         vote.remove( "Alexandre" )
+        alexandre.append( vote [-1:] )
         
     
-        alexandre.append( vote [-1:] )
-
-    
-    
-
     if "Clement" in vote : 
         print ( "bonjour" )
 
         vote.remove( "Clement" )
-        
-    
         clement.append( vote [-1:] )
-
-    
 
 
     if "Leo" in vote :
         print ( "bonsoir" )
 
-        vote.remove( "Leo" )
-        print ( vote)
-    
         leo.append( vote [-1:] )
+        vote.remove( "Leo" )
 
-    
 
 
 print ("liste d'alexandre",alexandre)
 print ( "liste de leo",leo)
 print ("liste de clement",clement)
-
 print ( vote )
+
+
+a = len ( alexandre )
+c = len ( clement )  
+l = len ( leo )
+
+if a == c or a == l or c == l :
+
+    a == alexandre.count ( "excellent" )
+
+    c == clement.count ( "excellent" )
+
+    l == leo.count ( "excellent" )
 
 
 
